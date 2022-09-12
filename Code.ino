@@ -11,8 +11,8 @@
 #define OLED_RESET -1
 #define SENSOR_PIN 26
 
-const char* ssid = "Raj";   
-const char* password = "raju1234";
+const char* ssid = "esw-m19@iiith";   
+const char* password = "e5W-eMai@3!20hOct";
 int writeChannelID = 1837480;
 char writeAPIKey[] = "81PQDLQVBE6QY26J";
 char readAPIKey[] = "FXUMI21X9IO5UIIW";
@@ -98,10 +98,12 @@ void loop() {
   display.setCursor(0, 0);
     
     display.print("Flow Rate: ");
-    display.println(float(flowRate));
+    display.print(float(flowRate));
+    display.println(" mL/s");
     Serial.println(float(flowRate));  
     display.print("Total Flow: ");
-    display.println(totalLitres);
+    display.print(totalLitres);
+    display.println(" L");
     Serial.println(totalLitres);
     display.display();
     delay(2000);
